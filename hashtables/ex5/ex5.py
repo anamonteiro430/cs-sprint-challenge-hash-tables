@@ -3,10 +3,16 @@
 
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    paths = {}
+    result=[]
+    for file in files:
+        paths[file] = 0
+    
+    for key in paths:
+        for q in queries:
+            if q in key:
+                result.append(key)
+                
 
     return result
 

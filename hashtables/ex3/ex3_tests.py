@@ -33,8 +33,8 @@ class TestEx2(unittest.TestCase):
         result.sort()
         self.assertTrue(result == [1,3])
 
-    ''' def test_large(self):
-             arrays = [
+    def test_large(self):
+        arrays = [
             list(range(1000000, 2000000)) + [1,2,3],
             list(range(2000000, 3000000)) + [1,2,3],
             list(range(3000000, 4000000)) + [1,2,3],
@@ -49,7 +49,7 @@ class TestEx2(unittest.TestCase):
 
         result = intersection(arrays)
         result.sort()
-        self.assertTrue(result == [1,2,3]) '''
+        self.assertTrue(result == [1,2,3])
 
 if __name__ == '__main__':
     unittest.main()

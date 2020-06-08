@@ -3,25 +3,21 @@ def intersection(arrays):
     #[1,4,5],
     #[1,6,7]
     
-    count = {}
-    list=[]
-    for i in arrays[0]:
-        if i not in count:
-            count[i] = 1
-        else:
-            count[i] += 1
+    count = {}  #store the elements of all arrays
+    list=[]     #will serve as container to hold the repeated
+    length = 0  #number of arrays in input
     
-    for i in arrays[1]:
-        if i not in count:
-            count[i] = 1
-        else:
-            count[i] += 1
-        
-    print(count)
+    for a in arrays:   #outer loop, iterate through array
+        length += 1    #for each array I go through count to length
+        for b in a:    #inner loop ,iterate through elem in each arr
+            if b not in count:  #if that elem is not in cache
+                count[b] = 1    #added it
+            else:
+                count[b] += 1   #else, increment it by one
 
-    for key in count:
-        if count[key] >= 2:
-             list.append(key)    
+    for key in count:           #for each key in count
+        if count[key] >= length:#if the value of the key is greater then the number of arrays given
+             list.append(key)    #append to the result list
 
     return list
 
