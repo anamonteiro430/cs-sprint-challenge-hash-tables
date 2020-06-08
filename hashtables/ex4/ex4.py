@@ -1,15 +1,19 @@
+#a is a list of numbers both positive and negative
+#assuming there are no repeated numbers(like in test and ex.)
+#make each number in list be positive using abs()
+#count them in cache
+#those who have a count of 2 append to result list
+
 def has_negatives(a):
     count={}
     result=[]
     a = [abs(i) for i in a]
-    print(a)
     
     for i in a:
         if i in count:
             count[i] += 1
         else:
             count[i] = 1
-    print(count)
 
     for key in count:
         if count[key] == 2:
